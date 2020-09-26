@@ -9,11 +9,11 @@ a nice ANSI escape codes `API` to use ansi color in a elegant way that support *
 ## <a name="examples"></a> Examples
 
 ```rust
-#[macro_use]
-
-
 extern crate qute;
-use qute::design::Designer; 
+
+
+use qute::*;
+use qute::design::Designer;
 
 
 fn main () {

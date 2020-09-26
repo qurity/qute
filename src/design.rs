@@ -20,12 +20,12 @@ use std::fmt;
 
 
 // TODO: does i have to move macro_rules in lib.rs?
-#[macro_export]
-macro_rules! qute {
-  ($e:expr) => {
-    Designer::new($e)
-  };
-}
+// #[macro_export]
+// macro_rules! qute {
+//   ($e:expr) => {
+//     Designer::new($e)
+//   };
+// }
 
 
 #[derive(Clone, Debug)]

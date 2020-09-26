@@ -1,8 +1,10 @@
 [package]
 name = "qute"
-version = "0.0.0"
+description = "designify your terminal with a large ansi colors palette"
+version = "0.0.2"
+license = "MIT"
+homepage = "https://github.com/qurity"
+readme = "README.md"
+repository = "https://github.com/qurity/qute"
 authors = ["monsieurbadia <contact@monsieurbadia.com>"]
 edition = "2018"
-
-[dependencies]
-atty = "0.2.14"
