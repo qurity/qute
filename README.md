@@ -47,7 +47,7 @@ the `qute!` macro contains all method to designify your terminal as you want. `S
 
 | color         | snippet                                  | preview                                                                                                                         |
 |---------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| bold          | ```qute!("my string").bold()```          | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-modifier-bold.svg?raw=true&sanitize=true"/>           |
+| bold          | ```qute!("my string").bold()```          | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-modifier-bold.svg"/>           |
 | dim           | ```qute!("my string").dim()```           | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-modifier-dim.svg"/>            |
 | underlined    | ```qute!("my string").underline()```     | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-modifier-underline.svg"/>      |
 | blink         | ```qute!("my string").blink()```         | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-modifier-blink.svg"/>          |

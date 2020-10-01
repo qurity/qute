@@ -6,6 +6,6 @@ pub mod sgr;
 #[macro_export]
 macro_rules! qute {
   ($e:expr) => {
-    Designer::new($e)
+    $crate::design::Designer::new($e)
   };
 }
