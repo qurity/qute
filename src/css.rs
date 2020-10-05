@@ -1,4 +1,13 @@
-use std::fmt;
+use std::{
+  clone::Clone,
+	fmt::{
+    Debug,
+		Display,
+		Formatter,
+		Result,
+  },
+  marker::Copy,
+};
 
 
 /// contains CSSColorRGB, each struct is the representation of a CSS color keyword
@@ -909,8 +918,8 @@ pub struct CSSColorRGB {
 }
 
 
-impl fmt::Debug for CSSColorRGB {
-  fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Debug for CSSColorRGB {
+  fn fmt(&self, f: &mut Formatter) -> Result {
     write!(
       f,
       "\nkeyworkd: {}\ncolor: rgb({}, {}, {})",
@@ -1088,8 +1097,8 @@ impl std::clone::Clone for CSSColorRGB {
 }
 
 
-impl fmt::Display for CSSKeyword {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for CSSKeyword {
+	fn fmt(&self, f: &mut Formatter) -> Result {
 		match &self {
       CSSKeyword::Aqua => write!(f, "aqua"),
       CSSKeyword::Black => write!(f, "black"),

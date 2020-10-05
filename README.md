@@ -20,6 +20,8 @@ a nice ANSI escape codes `API` to use ansi color in a elegant way that support *
 
 ## <a name="examples"></a> Examples
 
+**snippet**
+
 ```rust
 extern crate qute;
 
@@ -27,11 +29,38 @@ extern crate qute;
 use qute::*;
 use qute::design::Designer;
 
+// OR
+
+use qute::prelude::*;
 
 fn main () {
   println!("{}", qute!(" BLACK WHITE (BASIC) ").background_black().white());
 }
 ```
+
+## Usage
+
+Add the following to your Cargo.toml:
+
+```toml
+[dependencies]
+qute = "0.0.6"
+```
+
+Now you can use the crate in your code
+
+```rust
+extern crate qute;
+```
+
+**cargo**
+
+| type  | command                           |
+|-------|-----------------------------------|
+| 256   | cargo run --example hello_colors  |
+| basic | cargo run --example basic         |
+| css   | cargo run --example css           |
+| rgb   | cargo run --example rgb           |
 
 ## <a name="api"></a> API
 
@@ -119,8 +148,8 @@ the `qute!` macro contains all method to designify your terminal as you want. `S
 
 | mode       | snippet                                          | preview                                                                                                                |
 |------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| foreground | ```qute!("my string").set_rgb_color(231)```      | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-256-color.svg"/>      |
-| background | ```qute!("my string").set_rgb_background(220)``` | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-256-background.svg"/> |
+| foreground | ```qute!("my string").set_color(231)```      | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-256-color.svg"/>      |
+| background | ```qute!("my string").set_background(220)``` | <img src="https://raw.githubusercontent.com/qurity/qurity-design/master/qute/preview/hello-color-256-background.svg"/> |
 
 ### <a name="rgb"></a> RGB
 

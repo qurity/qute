@@ -1,4 +1,10 @@
-use std::fmt;
+use std::{
+	fmt::{
+		Display,
+		Formatter,
+		Result,
+	},
+};
 
 
 pub const START_ESCAPE_ASCII: &str = "\x1b[";
@@ -23,8 +29,8 @@ pub enum SGRSet {
 }
 
 
-impl fmt::Display for SGRSet {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for SGRSet {
+	fn fmt(&self, f: &mut Formatter) -> Result {
     match self {
       SGRSet::Bold => write!(f, "{}", 1),
       SGRSet::Dim => write!(f, "{}", 2),
@@ -55,8 +61,8 @@ pub enum SGRReset {
 }
 
 
-impl fmt::Display for SGRReset {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for SGRReset {
+	fn fmt(&self, f: &mut Formatter) -> Result {
     match self {
       SGRReset::ALL => write!(f, "{}", 0),
 
@@ -97,8 +103,8 @@ pub enum SGRForeground {
 }
 
 
-impl fmt::Display for SGRForeground {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for SGRForeground {
+	fn fmt(&self, f: &mut Formatter) -> Result {
     match self {
       SGRForeground::DEFAULT => write!(f, "{}", 39),
 
@@ -147,8 +153,8 @@ pub enum SGRBackground {
 }
 
 
-impl fmt::Display for SGRBackground {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for SGRBackground {
+	fn fmt(&self, f: &mut Formatter) -> Result {
     match self {
       SGRBackground::DEFAULT => write!(f, "{}", 49),
 
@@ -184,8 +190,8 @@ pub enum SGRRGB {
 }
 
 
-impl fmt::Display for SGRRGB {
-	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Display for SGRRGB {
+	fn fmt(&self, f: &mut Formatter) -> Result {
     match self {
       SGRRGB::DEFAULT => write!(f, "{}", 2),
       SGRRGB::SELECTOR => write!(f, "{}", 5),

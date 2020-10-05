@@ -2,7 +2,7 @@
 
 
 extern crate qute;
-use qute::design::Designer;
+use qute::prelude::*;
 
 
 fn main () {
