@@ -162,16 +162,13 @@ CSS colors keyword are supported. See the complete list [here](https://www.w3.or
 * [x] support vga
 * [x] support rgb
 * [x] support css colors keywords
+* [ ] unit testing (wip)
 * [ ] support hexa
 * [ ] support hsl
-* [ ] support format string
-* [ ] detect color terminal support
-* [ ] hsl to rgb
-* [ ] unit testing
+* [ ] force color
 * [ ] convert to css
 * [ ] cross platform
-* [ ] documentation
-* [ ] port js (?)
+* [x] documentation
 
 ## <a name="license"></a> License   
 
