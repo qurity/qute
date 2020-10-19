@@ -5,7 +5,8 @@ pub mod sgr;
 
 pub mod prelude {
   pub use crate::{
-    *,
+    qute,
+    style,
     css::{
       CSSColorRGB,
     },
