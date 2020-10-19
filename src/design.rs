@@ -1,4 +1,5 @@
 use crate::{
+	css::{CSS_COLORS_RGB, CSSColorRGB, CSSKeyword},
 	sgr::{
 		END_ESCAPE_ASCII,
 		START_ESCAPE_ASCII,
@@ -8,21 +9,10 @@ use crate::{
 		SGRSet,
 		SGRRGB,
 	},
-	css::{
-		CSS_COLORS_RGB,
-		CSSColorRGB,
-		CSSKeyword,
-	}
 };
 
 
-use std::{
-	fmt::{
-		Display,
-		Formatter,
-		Result,
-	}
-};
+use std::fmt::{Display, Formatter, Result};
 
 
 #[derive(Clone, Debug)]
@@ -45,8 +35,8 @@ impl Designer {
 		}
 	}
 
-	pub fn none (self) -> Self {
-		self
+	pub fn none (self) -> String {
+		self.string
 	}
 
 	pub fn bold (&mut self) -> Self {
@@ -568,7 +558,7 @@ impl Designer {
 
 	/// create new instance with the formatted string
 	fn style (&mut self, new_string: &str) -> Self {
-		Self {
+		Designer {
 			string: new_string.to_owned(),
 		}
 	}

@@ -31,19 +31,33 @@ a nice ANSI escape codes `API` to use ansi color in a elegant way that support *
 ```rust
 extern crate qute;
 
+use qute::prelude::*;
 
-use qute::*;
-use qute::design::Designer;
+fn main () {
+  let quted = qute!("my string").background_black().white();
 
-// OR
+  println!("{}", quted);
+}
+```
+
+
+```rust
+extern crate qute;
 
 use qute::prelude::*;
 
 fn main () {
-  println!("{}", qute!(" BLACK WHITE (BASIC) ").background_black().white());
-}
-```
+  let quted = style!({
+    value: "my string";
+    color: "purple";
+    background: "black";
+    font-weight: none;
+  });
 
+  println!("{}", quted);
+}
+
+```
 **cargo**
 
 | example | command                           |
@@ -59,7 +73,7 @@ Add the following to your Cargo.toml:
 
 ```toml
 [dependencies]
-qute = "0.0.6"
+qute = "0.0.11"
 ```
 
 Now you can use the crate in your code

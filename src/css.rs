@@ -1,11 +1,6 @@
 use std::{
   clone::Clone,
-	fmt::{
-    Debug,
-		Display,
-		Formatter,
-		Result,
-  },
+	fmt::{Debug, Display, Formatter, Result},
   marker::Copy,
 };
 
@@ -922,7 +917,12 @@ impl Debug for CSSColorRGB {
   fn fmt(&self, f: &mut Formatter) -> Result {
     write!(
       f,
-      "\nkeyworkd: {}\ncolor: rgb({}, {}, {})",
+
+      "CSSColorRGB {{\
+      \n  keyworkd: {}\
+      \n  color: rgb({}, {}, {})\
+      \n}}",
+
       self.keyword,
       self.r,
       self.g,

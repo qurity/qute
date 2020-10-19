@@ -34,13 +34,10 @@ macro_rules! style {
     background: $background:expr;
     font-weight: $modifier:ident;
   }) => {
-    println!(
-      "{}",
-      $crate::design::Designer::new($value)
-      .set_css_color($color)
-      .set_css_background($background)
-      .$modifier()
-      ,
-    )
+    $crate::design::Designer::new($value)
+    .set_css_color($color)
+    .set_css_background($background)
+    .$modifier()
+    .to_string()
   }
 }

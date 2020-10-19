@@ -1,10 +1,4 @@
-use std::{
-	fmt::{
-		Display,
-		Formatter,
-		Result,
-	},
-};
+use std::fmt::{Display, Formatter, Result};
 
 
 pub const START_ESCAPE_ASCII: &str = "\x1b[";
@@ -30,7 +24,7 @@ pub enum SGRSet {
 
 
 impl Display for SGRSet {
-	fn fmt(&self, f: &mut Formatter) -> Result {
+	fn fmt (&self, f: &mut Formatter) -> Result {
     match self {
       SGRSet::Bold => write!(f, "{}", 1),
       SGRSet::Dim => write!(f, "{}", 2),
@@ -49,7 +43,6 @@ impl Display for SGRSet {
 #[derive(Clone, Copy, Eq, PartialEq)]
 pub enum SGRReset {
   ALL = 0,
-
   Bold = 21,
   Dim = 22,
   Italic = 23,
@@ -62,10 +55,9 @@ pub enum SGRReset {
 
 
 impl Display for SGRReset {
-	fn fmt(&self, f: &mut Formatter) -> Result {
+	fn fmt (&self, f: &mut Formatter) -> Result {
     match self {
       SGRReset::ALL => write!(f, "{}", 0),
-
       SGRReset::Bold => write!(f, "{}", 21),
       SGRReset::Dim => write!(f, "{}", 22),
       SGRReset::Italic => write!(f, "{}", 23),
@@ -83,7 +75,6 @@ impl Display for SGRReset {
 #[derive(Clone, Copy, Eq, PartialEq)]
 pub enum SGRForeground {
   DEFAULT = 39,
-
   Black = 30,
   Red = 31,
   Green = 32,
@@ -104,10 +95,9 @@ pub enum SGRForeground {
 
 
 impl Display for SGRForeground {
-	fn fmt(&self, f: &mut Formatter) -> Result {
+	fn fmt (&self, f: &mut Formatter) -> Result {
     match self {
       SGRForeground::DEFAULT => write!(f, "{}", 39),
-
       SGRForeground::Black => write!(f, "{}", 30),
       SGRForeground::Red => write!(f, "{}", 31),
       SGRForeground::Green => write!(f, "{}", 32),
@@ -133,7 +123,6 @@ impl Display for SGRForeground {
 #[derive(Clone, Copy, Eq, PartialEq)]
 pub enum SGRBackground {
   DEFAULT = 49,
-
   Black = 40,
   Red = 41,
   Green = 42,
@@ -154,10 +143,9 @@ pub enum SGRBackground {
 
 
 impl Display for SGRBackground {
-	fn fmt(&self, f: &mut Formatter) -> Result {
+	fn fmt (&self, f: &mut Formatter) -> Result {
     match self {
       SGRBackground::DEFAULT => write!(f, "{}", 49),
-
       SGRBackground::Black => write!(f, "{}", 40),
       SGRBackground::Red => write!(f, "{}", 41),
       SGRBackground::Green => write!(f, "{}", 42),
@@ -184,7 +172,6 @@ impl Display for SGRBackground {
 pub enum SGRRGB {
   DEFAULT = 2,
   SELECTOR = 5,
-
   Foreground = 38,
   Background = 48,
 }
@@ -195,7 +182,6 @@ impl Display for SGRRGB {
     match self {
       SGRRGB::DEFAULT => write!(f, "{}", 2),
       SGRRGB::SELECTOR => write!(f, "{}", 5),
-
       SGRRGB::Foreground => write!(f, "{}", 38),
       SGRRGB::Background => write!(f, "{}", 48),
     }
