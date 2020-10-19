@@ -45,6 +45,10 @@ impl Designer {
 		}
 	}
 
+	pub fn none (self) -> Self {
+		self
+	}
+
 	pub fn bold (&mut self) -> Self {
 		let to_bold = self.to(
 			&SGRSet::Bold,

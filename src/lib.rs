@@ -26,16 +26,16 @@ macro_rules! qute {
 
 
 #[macro_export]
-macro_rules! designify {
+macro_rules! style {
   ({
-    name: $name: ident;
-    color: $color: ident;
-    background: $background: ident;
-    font-weight: $modifier: ident
+    value: $value:expr;
+    color: $color:expr;
+    background: $background:expr;
+    font-weight: $modifier:ident;
   }) => {
     println!(
       "{}",
-      $crate::design::Designer::new($e)
+      $crate::design::Designer::new($value)
       .set_css_color($color)
       .set_css_background($background)
       .$modifier()
