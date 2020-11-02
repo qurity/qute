@@ -1,0 +1,25 @@
+<svg width="96" height="25" viewBox="0 0 96 25" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <style>
+      .content {
+        font: 16px sans-serif;
+        fill: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+    <rect
+      x="0"
+      y="0"
+      width="96"
+      height="25"
+      fill="black">
+    </rect>
+    <text
+      x="50%"
+      y="50%"
+      class="content"
+      dominant-baseline="middle"
+      text-anchor="middle">
+      Hello Color
+    </text>
+  </g>
+</svg>

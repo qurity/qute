@@ -1,7 +1,7 @@
 [package]
 name = "qute"
 description = "designify your terminal with a large ansi colors palette"
-version = "0.0.11"
+version = "0.0.12"
 license = "MIT"
 homepage = "https://github.com/qurity"
 readme = "README.md"
@@ -10,8 +10,11 @@ authors = ["monsieurbadia <contact@monsieurbadia.com>"]
 edition = "2018"
 
 exclude = [
+  "doc/**/*",
   "examples/**/*",
   "target/**/*",
+  "tests/**/*",
+  "Cargo.lock",
 ]
 
 keywords = [
