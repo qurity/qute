@@ -1,12 +1,12 @@
 [package]
 name = "qute"
-description = "designify your terminal with a large ansi colors palette"
-version = "0.0.12"
-license = "MIT"
-homepage = "https://github.com/qurity"
-readme = "README.md"
-repository = "https://github.com/qurity/qute"
+version = "0.0.13"
 authors = ["monsieurbadia <contact@monsieurbadia.com>"]
+description = "designify your terminal with a large ansi colors palette 🎨"
+homepage = "https://github.com/qurity"
+repository = "https://github.com/qurity/qute"
+readme = "README.md"
+license = "MIT"
 edition = "2018"
 
 exclude = [
@@ -21,6 +21,11 @@ keywords = [
   "ansi",
   "color",
   "qute",
+]
+
+categories = [
+  "command-line-interface",
+  "development-tools"
 ]
 
 [lib]

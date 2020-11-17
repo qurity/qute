@@ -18,7 +18,7 @@
 
 ---
 
-> *designify your terminal with a large ansi colors palette*
+> *designify your terminal with a large ansi colors palette* 🎨
 
 [Examples](#examples) &mdash; [API](#api) &mdash; [Goals](#goals) &mdash; [License](#license)
 
@@ -73,7 +73,7 @@ Add the following to your Cargo.toml:
 
 ```toml
 [dependencies]
-qute = "0.0.12"
+qute = "0.0.13"
 ```
 
 Now you can use the crate in your code
