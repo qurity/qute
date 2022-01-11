@@ -3,7 +3,7 @@
     <style>
       .content {
         fill: rgb(205, 25, 0);
-        font: bold 16px sans-serif;
+        font: normal 16px sans-serif;
       }
     </style>
     <rect

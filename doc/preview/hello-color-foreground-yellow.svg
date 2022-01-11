@@ -2,8 +2,8 @@
   <g>
     <style>
       .content {
-        fill: rgb(205, 25, 0);
-        font: bold 16px sans-serif;
+        fill: rgb(255, 215, 0);
+        font: normal 16px sans-serif;
       }
     </style>
     <rect
